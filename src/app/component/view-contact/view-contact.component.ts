@@ -46,7 +46,7 @@ export class ViewContactComponent implements OnInit {
     this.dialogShow = false;
   }
 
-  editContact() {
+  goToEditContact() {
     this.router.navigate(['edit-contact', this.id]);
   }
 }

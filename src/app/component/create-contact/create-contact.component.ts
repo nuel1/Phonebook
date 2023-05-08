@@ -23,9 +23,8 @@ export class CreateContactComponent {
   getGenerateId() {
     let c = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     let id = '';
-    for (let i = 0; i < 21; i++) {
-      id += c[Math.floor(Math.random() * c.length)];
-    }
+    for (let i = 0; i < 21; i++) id += c[Math.floor(Math.random() * c.length)];
+
     return id;
   }
 
