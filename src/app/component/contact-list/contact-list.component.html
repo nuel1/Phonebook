@@ -1,0 +1,28 @@
+<div class="container">
+  <header>
+    <div class="heading">
+      <h1>Contact</h1>
+      <button (click)="goToCreateContact()">Create Contact</button>
+    </div>
+    <div class="search-box">
+      <input
+        type="text"
+        #input
+        (keyup)="search(input.value)"
+        placeholder="Search..."
+      />
+    </div>
+  </header>
+  <div class="contact-list">
+    <ul>
+      <li *ngFor="let contact of contacts">
+        <app-contact
+          [id]="contact.id"
+          [name]="contact.name"
+          [phone]="contact.phone"
+          (viewContactDetails)="contactDetails(contact.id)"
+        ></app-contact>
+      </li>
+    </ul>
+  </div>
+</div>

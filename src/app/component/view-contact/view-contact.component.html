@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="profile-pic">
+    <img src="../../../assets/avaterimg.png" class="avater" />
+  </div>
+  <h1 class="name">{{ contact.name }}</h1>
+  <p class="phone">{{ contact.phone }}</p>
+
+  <div class="btn-group">
+    <button (click)="openDeleteDialog()">Delete</button>
+    <button (click)="editContact()">Edit</button>
+  </div>
+  <form action="" class="editform"></form>
+  <div *ngIf="dialogShow" class="delete-dialog">
+    <h2>Delete "{{ contact.name }}"?</h2>
+    <div class="btn-group">
+      <button (click)="cancelDelete()">Cancel</button>
+      <button (click)="deleteContact()">Delete</button>
+    </div>
+  </div>
+</div>

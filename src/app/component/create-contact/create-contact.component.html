@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Create Contact</h1>
+  <form (ngSubmit)="createContact()">
+    <span class="error-mssg" *ngIf="nameEntryError">Name is required</span>
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      [(ngModel)]="contact.name"
+      required
+    />
+    <span class="error-mssg" *ngIf="phoneEntryError"
+      >Phone number should be 11 digits long.</span
+    >
+    <input
+      type="text"
+      name="phonenumber"
+      placeholder="Phone number"
+      [(ngModel)]="contact.phone"
+      required
+    />
+    <input type="submit" value="Create" />
+  </form>
+</div>
